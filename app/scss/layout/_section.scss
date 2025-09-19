@@ -1,0 +1,19 @@
+.section {
+  padding: 48px 100px;
+
+  &__title {
+    color: var(--color-primary-dark);
+    font-family: Play;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__title-span {
+    color: var(--color-primary-light);
+    &--capitalized {
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+  &__bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-secondary-light);
+    border-radius: 50%;
+    padding: 0;
+
+    &--active {
+      background-color: var(--color-primary-light);
+    }
+  }
+}

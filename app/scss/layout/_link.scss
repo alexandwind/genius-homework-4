@@ -1,0 +1,13 @@
+.link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: var(--color-primary-light);
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,46 @@
+.contacts-section {
+  &__container {
+    padding: 0 100px 40px 100px;
+  }
+
+  &__title {
+    text-align: center;
+    padding-block-end: 32px;
+  }
+
+  &__map-form {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__map {
+    flex-grow: 6;
+  }
+  &__form {
+    padding: 48px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 4;
+    background-color: var(--color-primary-dark);
+    border-radius: 32px;
+  }
+
+  &__form-title {
+    color: var(--color-primary);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 274px;
+    width: 100%;
+    margin: 0 auto 48px;
+
+    &--span {
+      color: var(--color-primary-light);
+    }
+  }
+}

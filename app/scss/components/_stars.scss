@@ -1,0 +1,40 @@
+.stars {
+  &__star1,
+  &__star2,
+  &__star3 {
+    position: absolute;
+  }
+
+  &__star1:hover,
+  &__star2:hover,
+  &__star3:hover {
+    animation: rotating 3s ease-out;
+  }
+
+  &__star1 {
+    top: 0;
+    left: 0;
+    margin-inline-start: 160px;
+    margin-block-start: 340px;
+    fill: var(--color-primary-dark);
+    animation: scaling-rotation 3s 3 ease-in-out;
+  }
+
+  &__star2 {
+    top: 0;
+    right: 0;
+    margin-inline-start: 495px;
+    margin-block-start: 32px;
+    fill: var(--color-primary-light);
+    animation: translating-scaling-rotation 3s 3 ease-in-out;
+  }
+
+  &__star3 {
+    top: 0;
+    right: 0;
+    margin-inline-end: 14px;
+    margin-block-start: 270px;
+    fill: var(--color-secondary-light);
+    animation: scaling 3s 3 ease-in-out;
+  }
+}

@@ -1,0 +1,8 @@
+.social-icon {
+  fill: var(--color-primary);
+  transition: fill 0.2s ease-in;
+
+  &:hover {
+    fill: var(--color-primary-light);
+  }
+}

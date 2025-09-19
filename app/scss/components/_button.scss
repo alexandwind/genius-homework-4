@@ -1,0 +1,26 @@
+.button {
+  flex-shrink: 0;
+  padding: 16px 32px;
+  cursor: pointer;
+  font-family: Roboto;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: normal;
+  border-radius: 32px;
+  background-color: var(--color-primary-light);
+  transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+    border: 2px solid var(--color-primary-light);
+    color: var(--color-primary-dark);
+  }
+
+  &--dark {
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
