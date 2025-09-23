@@ -1,3 +1,5 @@
+@use '../util' as u;
+
 .procedures-card {
   display: flex;
   justify-content: center;
@@ -10,11 +12,9 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
-    border-radius: 120px 4px;
+    border-radius: u.pxRem(120) 4px;
     flex-shrink: 0;
-    height: 456px;
-    height: 100%;
-    width: 344px;
+    height: u.pxRem(456);
     width: 100%;
     background-image: linear-gradient(
       180deg,
@@ -34,14 +34,14 @@
   }
 
   &__title {
-    padding-block-start: 372px;
+    padding-block-start: u.pxRem(372);
     color: var(--color-primary);
     text-align: center;
-    font-family: Roboto;
+    font-family: u.$font-roboto;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.2;
-    width: min(100%, 152px);
+    width: min(100%, u.pxRem(152));
   }
 }

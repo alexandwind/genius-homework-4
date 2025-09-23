@@ -1,3 +1,31 @@
+@use '../util' as u;
+
+%title-span-capitalized {
+  text-transform: capitalize;
+  color: var(--color-primary-light);
+}
+
+%title-span-primary-light {
+  text-transform: capitalize;
+  color: var(--color-primary-light);
+}
+
+a,
+a:visited,
+a:active {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+address {
+  font-style: normal;
+}
+
 h1,
 h2,
 h3,

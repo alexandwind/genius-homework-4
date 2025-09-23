@@ -1,11 +1,19 @@
+@use '../util' as u;
+
 .procedures-section {
+  padding-inline: 20px;
+
   &__container {
     overflow: hidden;
   }
 
   &__title {
     text-align: center;
-    margin-block-end: 48px;
+    margin-block-end: clamp(
+      u.pxRem(24),
+      0.8571429rem + 2.85714286vw,
+      u.pxRem(48)
+    );
     justify-self: center;
   }
 

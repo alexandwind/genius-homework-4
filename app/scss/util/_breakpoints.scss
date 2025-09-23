@@ -1,0 +1,13 @@
+@use './functions' as f;
+
+$breakpoints-min: (
+  'bp-mobile': f.pxRem(480),
+  'bp-tablet': f.pxRem(768),
+  'bp-laptop': f.pxRem(1024),
+  'bp-desktop': f.pxRem(1200),
+);
+
+$breakpoints-max: (
+  'bp-mobile': f.pxRem(479),
+  'bp-mobile-large': f.pxRem(767),
+);

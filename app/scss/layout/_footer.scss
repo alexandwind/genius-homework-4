@@ -1,29 +1,71 @@
+@use '../util' as u;
+
 .footer {
+  background-color: var(--color-primary-dark);
+
   &__container {
     position: relative;
-    padding: 56px 100px;
     display: flex;
-    justify-content: space-between;
-    background-color: var(--color-primary-dark);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 32px 90px;
+    padding-block: clamp(
+      u.pxRem(32),
+      1.35714286rem + 2.85714286vw,
+      u.pxRem(56)
+    );
+    padding-inline: clamp(
+      u.pxRem(90),
+      5.35714286rem + 1.1904762vw,
+      u.pxRem(100)
+    );
     background-size: cover;
     background-repeat: no-repeat;
 
+    @include u.bp-min(bp-laptop) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
     &::after {
+      display: none;
       position: absolute;
-      background-image: url('../images/jar\ with\ a\ pipette.png');
+      background-image: url('../images/jar-pipette.png');
       background-repeat: no-repeat;
-      width: 250px;
-      height: 150px;
+      background-size: cover;
+      width: 247px;
+      height: 152px;
       bottom: 0;
       right: 0;
       content: '';
+
+      @include u.bp-min(bp-laptop) {
+        display: block;
+      }
     }
   }
 
   &__logo,
-  .footer-nav,
-  footer-adress-lists {
+  &__footer-nav,
+  &__footer-adress-lists {
     display: flex;
+  }
+
+  &__logo {
+    margin-inline-start: 20px;
+    margin-block-end: 42px;
+
+    @include u.bp-min(bp-laptop) {
+      margin: 0;
+    }
+  }
+
+  &__logo-image {
+    width: 79px;
+    height: 38px;
   }
 
   &__menu,
@@ -32,21 +74,39 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding: 0;
+    margin: 0;
+
+    // @include u.bp-min(bp-laptop) {
+    //   padding-inline-start: 40px;
+    // }
+  }
+
+  &__menu {
+    margin: 0;
   }
 
   &__social-list {
     display: flex;
-    gap: 24px;
+    gap: 20px;
+    margin-inline-start: -20px;
+
+    @include u.bp-min(bp-laptop) {
+      gap: 24px;
+      padding: 16px;
+      margin: 0;
+    }
   }
 
   &__link {
+    font-size: u.pxRem(14);
+    font-size: clamp(u.pxRem(14), 0.82142857143rem + 0.2381vw, u.pxRem(16));
     color: var(--color-primary);
-    font-size: 16px;
   }
 
   &__copyright-text {
     color: var(--color-secondary-light);
-    font-family: Roboto;
+    font-family: u.$font-roboto;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;

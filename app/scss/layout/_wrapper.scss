@@ -1,10 +1,12 @@
-.wrapper {
-  width: min(100% - 48px, 1200px);
-  margin-inline: auto;
-  padding: 0 24px;
+@use '../util' as u;
 
-  /* max-width: 1268px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 24px; */
+.wrapper {
+  width: min(100%, u.pxRem(1200));
+  margin-inline: auto;
+  padding: 0;
+
+  @include u.bp-min(bp-tablet) {
+    width: min(100% - u.pxRem(48), u.pxRem(1248));
+    padding: 0 u.pxRem(24);
+  }
 }

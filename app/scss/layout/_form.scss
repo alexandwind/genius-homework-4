@@ -1,3 +1,5 @@
+@use '../util' as u;
+
 .form {
   display: flex;
   flex-direction: column;
@@ -43,7 +45,7 @@
   &__copyright-policy {
     color: var(--color-secondary-light);
     text-align: center;
-    font-family: Roboto;
+    font-family: u.$font-roboto;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

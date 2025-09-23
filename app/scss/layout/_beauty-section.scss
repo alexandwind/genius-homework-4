@@ -1,8 +1,19 @@
+@use '../util' as u;
+
 .beauty-section {
+  padding-inline: 20px;
+  padding-block: clamp(u.pxRem(20), -0.892857143rem + 9.52381vw, u.pxRem(100));
+
   &__container {
-    padding: 40px 92px 176px 100px;
+    padding: 0;
     display: flex;
-    gap: 28px;
+    flex-direction: column;
+
+    @include u.bp-min(bp-desktop) {
+      padding: 0 92px 70px 100px;
+      flex-direction: row;
+      gap: 28px;
+    }
   }
 
   &__info {
@@ -16,24 +27,37 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    flex-basis: 72px;
     flex-shrink: 0;
-    flex-grow: 5;
-    row-gap: 40px;
-    flex-basis: 530px;
+
+    @include u.bp-min(bp-desktop) {
+      flex-grow: 5;
+      row-gap: 40px;
+      flex-basis: 530px;
+    }
   }
 
   &__photo-before,
   &__photo-after {
-    border-radius: 50%;
-    flex-shrink: 0;
+    display: none;
+
+    @include u.bp-min(bp-desktop) {
+      display: flex;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
   }
 
   &__photo-before {
-    align-self: flex-start;
+    position: absolute;
+    top: -30px;
+    left: 30px;
   }
 
   &__photo-after {
-    align-self: flex-end;
+    position: absolute;
+    bottom: -100px;
+    right: 0;
   }
 
   &__title {
@@ -43,12 +67,25 @@
 
   &__description {
     color: var(--color-primary-dark);
-    font-family: Roboto;
-    font-size: 22px;
-    font-style: normal;
+    font-family: u.$font-roboto;
+    font-size: u.pxRem(18);
+    font-size: clamp(u.pxRem(18), 1.0178571423rem + 0.47619041vw, u.pxRem(22));
     font-weight: 400;
     line-height: 1.7;
-    max-width: 710px;
-    width: 100%;
+
+    @include u.bp-min(bp-tablet) {
+      font-weight: 500;
+    }
+
+    @include u.bp-min(bp-laptop) {
+      font-weight: 600;
+    }
+
+    @include u.bp-min(bp-desktop) {
+      color: var(--color-primary-dark);
+      font-weight: 700;
+      max-width: 710px;
+      width: 100%;
+    }
   }
 }

@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+@function pxRem($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 16) + rem;
+  } @else {
+    @error 'Error! Value #{$px} is not unitless! Type only numbers, no units allowed!';
+  }
+}
+
+@function pxEm($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 16) + em;
+  } @else {
+    @error 'Error! Value #{$px} is not unitless! Type only numbers, no units allowed!';
+  }
+}

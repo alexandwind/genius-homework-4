@@ -1,8 +1,14 @@
+@use '../util' as u;
+
 .modal {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-block-start: 170px;
+
+  @include u.bp-max(bp-mobile) {
+    padding-block-start: 120px;
+  }
 
   &__container {
     position: relative;
@@ -19,9 +25,14 @@
     border: none;
     position: absolute;
     background-color: transparent;
-    top: 42px;
-    right: 42px;
+    top: 24px;
+    right: 32px;
     cursor: pointer;
+
+    @include u.bp-max(bp-mobile) {
+      top: 16px;
+      right: 20px;
+    }
   }
 
   &__icon {
@@ -31,7 +42,15 @@
   }
 
   &__form-container {
-    padding: 42px 144px;
+    padding: 42px 0;
+
+    @include u.bp-min(bp-mobile) {
+      padding: 42px 40px;
+    }
+
+    @include u.bp-min(bp-tablet) {
+      padding: 42px 80px;
+    }
   }
 
   &__title,
@@ -41,8 +60,9 @@
   }
 
   &__title {
-    font-family: Play;
-    font-size: 64px;
+    font-size: u.pxRem(24);
+    font-size: clamp(u.pxRem(24), 0.4286rem + 4.762vw, u.pxRem(64));
+    font-family: u.$font-play;
     font-style: normal;
     font-weight: 700;
     line-height: 1;
@@ -50,8 +70,9 @@
   }
 
   &__subtitle {
-    font-family: Roboto;
-    font-size: 22px;
+    font-family: u.$font-roboto;
+    font-size: u.pxRem(14);
+    font-size: clamp(u.pxRem(14), 0.6607143rem + 0.952381vw, u.pxRem(22));
     font-weight: 600;
     line-height: 1;
     justify-content: center;
@@ -63,8 +84,14 @@
     }
   }
 
+  &__form-input {
+    @include u.bp-max(bp-mobile) {
+      padding: 12px 20px;
+    }
+  }
+
   &__form {
-    padding-inline: 60px;
+    padding-inline: clamp(u.pxRem(30), 1.0714286rem + 3.5714286vw, u.pxRem(60));
     gap: 24px;
   }
 }

@@ -1,51 +1,104 @@
+@use '../util' as u;
+
 .hero-section {
+  margin-block-end: -90px;
+
+  @include u.bp-min(bp-mobile) {
+    margin-block-end: -110px;
+  }
+
+  @include u.bp-min(bp-tablet) {
+    margin-block-end: -100px;
+  }
+
+  @include u.bp-min(bp-laptop) {
+    margin-block-end: -110px;
+  }
+
   &__content {
     background-image: linear-gradient(
-        89deg,
-        #fff 30.62%,
-        rgba(255, 255, 255, 0.85) 41.31%,
-        rgba(255, 255, 255, 0.19) 58.65%,
-        rgba(255, 255, 255, 0) 72.78%
+        57deg,
+        #fff 20.92%,
+        rgba(255, 255, 255, 0.78) 44.46%,
+        rgba(255, 255, 255, 0.2) 58.9%,
+        rgba(255, 255, 255, 0) 72.45%
       ),
       url('../images/hero-section-background.jpg');
+
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    padding: 24px 0 126px 200px;
+    padding: 0px 12px 56px;
+    text-align: center;
+    position: relative;
+    top: -72px;
+    z-index: 1;
+
+    @include u.bp-min(bp-tablet) {
+      background-image: linear-gradient(
+          89deg,
+          #fff 30.62%,
+          rgba(255, 255, 255, 0.85) 41.31%,
+          rgba(255, 255, 255, 0.19) 58.65%,
+          rgba(255, 255, 255, 0) 72.78%
+        ),
+        url('../images/hero-section-background.jpg');
+
+      background-position: bottom left;
+      padding: u.pxRem(24) 0 0 u.pxRem(200);
+      text-align: left;
+    }
   }
 
   &__subtitle {
     color: var(--color-primary-dark);
-    font-family: Roboto;
-    font-size: 18px;
-    font-style: normal;
+    font-family: u.$font-roboto;
+    font-size: u.pxRem(12);
+    font-size: clamp(u.pxRem(12), 0.5893rem + 0.7143vw, u.pxRem(18));
     font-weight: 400;
-    line-height: normal;
-    margin-block-start: 106px;
-    margin-block-end: 1rem;
+    line-height: 1;
+    padding-block-start: 64px;
+    margin-block: u.pxRem(72) 0;
+
+    @include u.bp-min(bp-tablet) {
+      line-height: 1.5;
+      margin-block: u.pxRem(74) u.pxRem(16);
+    }
   }
 
   &__title {
     color: var(--color-primary-light);
-    font-family: Play;
-    font-size: 140px;
+    font-family: u.$font-play;
+    font-size: u.pxRem(54);
+    font-size: clamp(u.pxRem(54), 1.071423rem + 10.2381vw, u.pxRem(140));
     font-style: normal;
     font-weight: 700;
     line-height: 0.8;
     text-transform: capitalize;
-    max-width: 530px;
-    width: 100%;
     margin-block-end: 2.5rem;
+    padding: 0;
+
+    @include u.bp-min(bp-tablet) {
+      line-height: 0.85;
+      width: min(100%, 530px);
+    }
   }
 
-  // &__button-content {
+  &__button-content {
+    position: relative;
+    z-index: 4;
 
-  // }
+    @include u.bp-max(bp-mobile-large) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
   &__btn-description {
     color: var(--color-secondary-dark);
     text-align: center;
-    font-family: Roboto;
+    font-family: u.$font-roboto;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

@@ -1,7 +1,15 @@
+@use '../util' as u;
+
 .why-us-section {
+  padding-block: 0;
+
   &__container {
     position: relative;
-    padding-block-end: 96px;
+    padding-block-end: clamp(
+      u.pxRem(40),
+      0.892857143rem + 7.142857143vw,
+      u.pxRem(100)
+    );
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,20 +17,39 @@
   }
 
   &__background-decor {
+    width: clamp(u.pxRem(360), 0rem + 100vw, u.pxRem(1200));
+    height: u.pxRem(800);
+    overflow: hidden;
     position: absolute;
-    top: -250px;
+    top: -50px;
     z-index: -1;
+
+    @include u.bp-min(bp-tablet) {
+      top: -140px;
+    }
   }
 
   &__title {
     text-align: center;
-    max-width: 432px;
+    max-width: u.pxRem(432);
+    min-width: u.pxRem(210);
     width: 100%;
   }
 
   &__list {
     display: flex;
-    gap: 56px;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+
+    @include u.bp-min(bp-laptop) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 56px;
+    }
   }
 
   &__list-item {

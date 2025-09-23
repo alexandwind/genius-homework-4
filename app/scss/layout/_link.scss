@@ -1,5 +1,7 @@
+@use '../util' as u;
+
 .link {
-  font-family: Roboto;
+  font-family: u.$font-roboto;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

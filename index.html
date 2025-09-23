@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,13 +28,12 @@
   </head>
   <body>
     <header class="header">
+      <h2 class="visually-hidden" aria-label="It is header">Header</h2>
       <div class="wrapper">
         <div class="header__content">
-          <div class="header__logo">
-            <a href="/"
-              ><img src="./images/logo.png" alt="logo Beauty Zone"
-            /></a>
-          </div>
+          <a class="header__logo" href="/"
+            ><img src="./images/logo.png" alt="logo Beauty Zone"
+          /></a>
 
           <nav class="header__nav">
             <ul class="header__menu">
@@ -89,6 +89,88 @@
         </div>
       </div>
     </header>
+    <div class="mobile-menu">
+      <div class="mobile-menu__wrapper">
+        <img
+          class="mobile-menu__logo"
+          width="56"
+          height="30"
+          src="./images/logo.png"
+          alt="logo Beauty Zone"
+        />
+        <button class="mobile-menu__close-btn menu-btn-close" type="button">
+          <img
+            width="24"
+            height="24"
+            src="./images/mobile-close.png"
+            alt="icon close"
+          />
+        </button>
+
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link link" href="/#hero-section"
+                >Про нас</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link link" href="/#why-us-section"
+                >Чому ми</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link link" href="/#procedures-section"
+                >Наші процедури</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link link" href="/#contacts-section"
+                >Контакти</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <address class="mobile-menu__social">
+          <ul class="mobile-menu__social-list">
+            <li>
+              <a href="#">
+                <svg
+                  width="32"
+                  height="32"
+                  class="mobile-menu__social-icon social-icon"
+                >
+                  <use href="./images/icon.svg#telephone"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+                  width="32"
+                  height="32"
+                  class="mobile-menu__social-icon social-icon"
+                >
+                  <use href="./images/icon.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+                  width="32"
+                  height="32"
+                  class="mobile-menu__social-icon social-icon"
+                >
+                  <use href="./images/icon.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
+    </div>
     <main>
       <section class="hero-section" id="hero-section">
         <div class="wrapper">
@@ -111,9 +193,9 @@
           <div class="beauty-section__container">
             <div class="beauty-section__info">
               <h2 class="beauty-section__title section__title">
-                Перевтілюйтесь в
-                <span
-                  class="section__title-span section__title-span--capitalized"
+                Перевтілюйтесь <br />
+                в
+                <span class="section__title-span--capitalized"
                   >beauty zone !</span
                 >
               </h2>
@@ -133,7 +215,7 @@
                 src="./images/woman face before.jpg"
                 alt="Woman face before"
               />
-              <svg class="stars__star1" width="64" height="64">
+              <svg class="stars__star1">
                 <use href="./images/icon.svg#star1"></use>
               </svg>
               <svg class="stars__star2" width="40" height="40">
@@ -154,11 +236,7 @@
       <section class="why-us-section section" id="why-us-section">
         <div class="wrapper">
           <div class="why-us-section__container">
-            <svg
-              class="why-us-section__background-decor"
-              width="1200"
-              height="1256"
-            >
+            <svg class="why-us-section__background-decor">
               <use href="./images/background-decor.svg"></use>
             </svg>
             <h2 class="why-us-section__title section__title">
@@ -296,15 +374,9 @@
                 </li>
               </ul>
               <div class="pagination">
-                <span
-                  class="pagination__bullet pagination__bullet--active"
-                ></span>
-                <span
-                  class="pagination__bullet pagination__bullet--active"
-                ></span>
-                <span
-                  class="pagination__bullet pagination__bullet--active"
-                ></span>
+                <span class="pagination__bullet--active"></span>
+                <span class="pagination__bullet--active"></span>
+                <span class="pagination__bullet--active"></span>
               </div>
             </div>
 
@@ -329,9 +401,6 @@
               <iframe
                 class="contacts-section__map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.475791668505!2d30.775223399999994!3d50.50671339999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d97de411b701%3A0x48116b28f7f00d94!2sTarasa%20Shevchenka%20St%2C%205%2C%20Brovary%2C%20Kyivs&#39;ka%20oblast%2C%2007400!5e0!3m2!1sen!2sua!4v1755193322016!5m2!1sen!2sua"
-                width="600"
-                height="480"
-                style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -339,8 +408,7 @@
               <div class="contacts-section__form">
                 <h3 class="contacts-section__form-title">
                   Запишіться
-                  <span
-                    class="contacts-section__form-title contacts-section__form-title--span"
+                  <span class="contacts-section__form-title--span"
                     >безкоштовно</span
                   >
                   та отримайте подарунок
@@ -394,8 +462,7 @@
                       Записатись безкоштовно
                     </button>
                     <p class="form__copyright-policy">
-                      Натискаючи на кнопку я погоджуюсь з політикою
-                      конфіденційності
+                      Натискаючи на кнопку я погоджуюсь
                       <a class="form__copyright-policy-link" href="#"
                         >з політикою конфіденційності</a
                       >
@@ -410,11 +477,17 @@
     </main>
 
     <footer class="footer">
+      <h2 class="visually-hidden" aria-label="It is footer">Footer</h2>
       <div class="wrapper">
         <div class="footer__container">
           <div class="footer__logo">
             <a href=""
-              ><img src="./images/logo.png" alt="logo Beauty Zone"
+              ><img
+                width="79"
+                height="38"
+                class="footer__logo-image"
+                src="./images/logo.png"
+                alt="logo Beauty Zone"
             /></a>
           </div>
 
@@ -454,7 +527,8 @@
                   class="footer__link link"
                   href="https://share.google/nJEDdIKG6ydN65LVh"
                   target="_blank"
-                  >Україна, м. Київ, вул. Тараса Шевченка 5</a
+                  >Україна, м. Київ, <br />
+                  вул. Тараса Шевченка 5</a
                 >
               </li>
             </ul>
@@ -515,7 +589,7 @@
                   >Name</label
                 >
                 <input
-                  class="form__input"
+                  class="form__input modal__form-input"
                   type="text"
                   id="user-name"
                   name="user-name"
@@ -530,7 +604,7 @@
                   >Telephone</label
                 >
                 <input
-                  class="form__input"
+                  class="form__input modal__form-input"
                   type="tel"
                   id="user-tel"
                   name="user-tel"
@@ -545,7 +619,7 @@
                   >Email</label
                 >
                 <input
-                  class="form__input"
+                  class="form__input modal__form-input"
                   type="email"
                   id="user-email"
                   name="user-email"
@@ -554,11 +628,11 @@
                 />
               </div>
               <div class="form__copyright">
-                <button class="button button--dark" type="submit">
+                <button class="button button--dark modal__button" type="submit">
                   Записатись безкоштовно
                 </button>
                 <p class="form__copyright-policy">
-                  Натискаючи на кнопку я погоджуюсь з політикою конфіденційності
+                  Натискаючи на кнопку я погоджуюсь
                   <a class="form-policy-link" href="#"
                     >з політикою конфіденційності</a
                   >
@@ -567,87 +641,6 @@
             </form>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="mobile-menu">
-      <div class="mobile-menu__container">
-        <img
-          class="mobile-menu__logo"
-          width="56"
-          height="30"
-          src="./images/logo.png"
-          alt="logo Beauty Zone"
-        />
-        <button class="mobile-menu__close-btn menu-btn-close" type="button">
-          <img
-            width="24"
-            height="24"
-            src="./images/mobile-close.png"
-            alt="icon close"
-          />
-        </button>
-
-        <nav class="mobile-menu__nav">
-          <ul class="mobile-menu__list">
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link link" href="#hero-section">Про нас</a>
-            </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link link" href="#why-us-section"
-                >Чому ми</a
-              >
-            </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link link" href="#procedures-section"
-                >Наші процедури</a
-              >
-            </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link link" href="#contacts-section"
-                >Контакти</a
-              >
-            </li>
-          </ul>
-        </nav>
-
-        <address class="mobile-menu__social">
-          <ul class="mobile-menu__social-list">
-            <li>
-              <a href="#">
-                <svg
-                  width="32"
-                  height="32"
-                  class="mobile-menu__social-icon social-icon"
-                >
-                  <use href="./images/icon.svg#telephone"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg
-                  width="32"
-                  height="32"
-                  class="mobile-menu__social-icon social-icon"
-                >
-                  <use href="./images/icon.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg
-                  width="32"
-                  height="32"
-                  class="mobile-menu__social-icon social-icon"
-                >
-                  <use href="./images/icon.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </address>
       </div>
     </div>
   </body>

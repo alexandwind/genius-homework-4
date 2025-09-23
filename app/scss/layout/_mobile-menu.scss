@@ -1,21 +1,28 @@
+@use '../util' as u;
+
 .mobile-menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-primary);
+  background-color: rgba(0, 0, 0, 0.5);
   transform: translateY(-100%);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
 
   &.is-open {
     transform: translateY(0);
   }
 
-  &__container {
-    width: min(100% - 40px, 768px);
-    margin-inline: auto;
+  &__wrapper {
     position: relative;
+    width: min(100% - u.pxRem(40), u.pxRem(980));
+    height: min(100% - u.pxRem(32), u.pxRem(320));
+    border-radius: 24px;
+    border: 1px solid var(--color-primary-dark);
+    background-color: var(--color-primary);
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +55,7 @@
   }
 
   &__link {
-    font-family: Roboto;
+    font-family: u.$font-roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
