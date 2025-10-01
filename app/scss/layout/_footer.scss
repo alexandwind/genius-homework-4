@@ -33,7 +33,7 @@
     &::after {
       display: none;
       position: absolute;
-      background-image: url('../images/jar-pipette.png');
+      background-image: url('/images/jar-pipette.png');
       background-repeat: no-repeat;
       background-size: cover;
       width: 247px;
@@ -44,6 +44,10 @@
 
       @include u.bp-min(bp-laptop) {
         display: block;
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('/images/jar-pipette@2x.png');
       }
     }
   }
