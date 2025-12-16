@@ -1,0 +1,19 @@
+@use '../util' as u;
+
+.article {
+  &.sh-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(43, 127, 255, 0.2) 39.74%,
+      rgba(43, 127, 255, 0) 54.16%,
+      rgba(43, 127, 255, 0) 66.66%
+    );
+  }
+  &__section {
+    padding-block-end: var(--clamp-40-96);
+
+    h2 {
+      margin-block-end: var(--clamp-24-48);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@use '../util' as u;
+
+.button {
+  padding: u.pxRem(16) u.pxRem(24);
+  font-size: u.pxRem(18);
+  border: 0;
+  font-weight: 600;
+  font-family: u.$font-roboto;
+  color: var(--c-white);
+  border-radius: 24px;
+  background-color: var(--c-blue-light);
+
+  @include u.bp-max(lap) {
+    font-size: u.pxRem(16);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

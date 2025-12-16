@@ -1,0 +1,144 @@
+@use '../util' as u;
+
+.footer {
+  background-color: var(--c-blue-dark);
+
+  &__wrapper {
+    padding-block: 2rem u.pxRem(67);
+    display: grid;
+    grid-template-areas: 'logo' 'links' 'policy-link' 'social' 'policy';
+    justify-items: center;
+    text-align: center;
+    position: relative;
+
+    @include u.bp(lap) {
+      padding-block: u.pxRem(56);
+      padding-inline: u.pxRem(100);
+      grid-template-areas: 'logo links policy-link' 'logo links social' 'logo links policy';
+    }
+    @include u.bp(desk) {
+      grid-template-areas:
+        'logo links contacts policy-link'
+        'logo links contacts policy'
+        'logo links social policy';
+    }
+
+    &::before {
+      display: none;
+      content: '';
+      background: var(--footer-bg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: u.pxRem(220);
+      height: u.pxRem(170);
+      position: absolute;
+      inset: auto 0 0 auto;
+
+      @include u.bp(lap) {
+        display: grid;
+      }
+
+      @include u.bp-max(lap) {
+        width: u.pxRem(130);
+        height: u.pxRem(100);
+      }
+    }
+  }
+  &__homelink {
+    // margin-block-end: u.pxRem(42);
+    grid-area: logo;
+
+    @include u.bp-max(tab) {
+      margin-block-end: u.pxRem(42);
+    }
+
+    @include u.bp-max(lap) {
+      align-self: center;
+    }
+
+    @include u.bp(desk) {
+      justify-self: start;
+      align-self: start;
+    }
+  }
+
+  &__links {
+    display: grid;
+    gap: 1rem;
+    grid-area: links;
+
+    @include u.bp-max(tab) {
+      margin-block-end: 1rem;
+    }
+
+    @include u.bp(desk) {
+      grid-row: 1 / span 2;
+    }
+  }
+  &__link {
+    span {
+      display: block;
+    }
+  }
+
+  &__link,
+  &__policy-link {
+    font-size: u.pxRem(14);
+    line-height: 1;
+    color: var(--c-white);
+
+    @include u.bp(lap) {
+      font-size: u.pxRem(16);
+    }
+  }
+
+  &__contacts {
+    grid-area: contacts;
+
+    @include u.bp-max(lap) {
+      display: none;
+    }
+    @include u.bp(desk) {
+      display: grid;
+      gap: 1rem;
+      margin-block-end: 1rem;
+    }
+  }
+  &__policy-link {
+    grid-area: policy-link;
+    margin-block-end: 1rem;
+
+    @include u.bp(desk) {
+      justify-self: end;
+    }
+  }
+  &__social-links {
+    display: flex;
+    gap: var(--clamp-20-24);
+    grid-area: social;
+
+    @include u.bp-max(lap) {
+      margin-block-end: 0.5rem;
+    }
+  }
+
+  &__icon {
+    fill: var(--c-white);
+  }
+
+  &__policy-text {
+    grid-area: policy;
+    font-size: u.pxRem(12);
+    line-height: 1.5;
+    color: var(--c-grey-light);
+
+    @include u.bp(lap) {
+      font-size: u.pxRem(14);
+      line-height: 1;
+    }
+
+    @include u.bp(desk) {
+      justify-self: end;
+    }
+  }
+}

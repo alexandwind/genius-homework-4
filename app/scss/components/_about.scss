@@ -1,0 +1,113 @@
+@use '../util' as u;
+
+.about {
+  // padding-block-end: u.pxRem(43);
+
+  &__wrapper {
+    @include u.bp(desk) {
+      margin-block-start: u.pxRem(40);
+      display: flex;
+      gap: 28px;
+    }
+  }
+  &__text-content {
+    max-width: u.pxRem(710);
+
+    @include u.bp-max(lap) {
+      margin-block-end: u.pxRem(6);
+      margin-inline: auto;
+    }
+    @include u.bp(desk) {
+      flex: 7;
+    }
+  }
+  &__title {
+    text-align: start;
+    margin-block-end: var(--clamp-24-40);
+  }
+  &__description {
+    &.first {
+      margin-block-end: var(--clamp-16-40);
+    }
+  }
+  &__img-stars {
+    position: relative;
+    display: grid;
+    justify-items: end;
+
+    @include u.bp(desk) {
+      top: -40px;
+      display: grid;
+      gap: 40px;
+      max-width: u.pxRem(503);
+      flex: 5;
+    }
+  }
+  &__img {
+    height: u.pxRem(328);
+    width: u.pxRem(335);
+    border-radius: 50%;
+
+    &.before {
+      justify-self: start;
+    }
+
+    &.after {
+      width: u.pxRem(343);
+      justify-self: end;
+    }
+
+    @include u.bp-max(lap) {
+      display: none;
+    }
+  }
+  &__star {
+    &.s1,
+    &.s2,
+    &.s3 {
+      @include u.bp(desk) {
+        position: absolute;
+      }
+    }
+
+    &.s1 {
+      height: var(--clamp-40-64);
+      width: var(--clamp-40-64);
+      fill: var(--c-blue-dark);
+      animation: glow 5s 1 ease-in-out;
+
+      @include u.bp(desk) {
+        inset: auto auto 257px 40px;
+        // animation: orbitSpin 12s linear infinite;
+        animation: glow1 10s 1 ease-in-out;
+      }
+    }
+
+    &.s2 {
+      height: u.pxRem(40);
+      width: u.pxRem(40);
+      fill: var(--c-blue-light);
+
+      @include u.bp-max(lap) {
+        display: none;
+      }
+      @include u.bp(desk) {
+        inset: 87px 31px auto auto;
+        animation: glow2 10s 1 ease-in-out;
+      }
+    }
+    &.s3 {
+      height: u.pxRem(16);
+      width: u.pxRem(16);
+      fill: var(--c-grey);
+
+      @include u.bp-max(lap) {
+        display: none;
+      }
+      @include u.bp(desk) {
+        inset: 325px 64px auto auto;
+        animation: glow3 10s 1 ease-in-out;
+      }
+    }
+  }
+}

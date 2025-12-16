@@ -1,0 +1,30 @@
+@use '../util' as u;
+
+.wrapper {
+  width: min(100% - u.pxEm(40), u.pxEm(1280));
+  margin-inline: auto;
+  // padding-block: u.pxRem(96);
+}
+
+.full-wrapper {
+  display: grid;
+  grid-template-columns:
+    [fw-start] 1fr [cnt-start] min(100% - u.pxEm(40), u.pxEm(1280))
+    [cnt-end] 1fr [fw-end];
+
+  > * {
+    grid-row: 1 / 2;
+  }
+
+  &__full {
+    grid-column: fw-start/fw-end;
+    align-self: end;
+
+    &.wave-sh {
+      align-self: start;
+    }
+  }
+  &__content {
+    grid-column: cnt-start/cnt-end;
+  }
+}

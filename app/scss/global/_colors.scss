@@ -1,9 +1,59 @@
 :root {
-  --color-primary: #ffffff;
-  --color-primary-light: #2b7fff;
-  --color-primary-dark: #011c44;
-  --color-secondary: #ffd02b;
-  --color-secondary-light: #747272;
-  --color-secondary-dark: #4a4a4a;
-  --color-secondary-text: #000000;
+  // colors
+  --c-white: hsl(0, 0%, 100%);
+  --c-black: hsl(0, 0%, 0%);
+  --c-grey: hsl(0, 0%, 29%);
+  --c-grey-light: hsl(0, 0%, 53%);
+  --c-grey-fade: hsla(0, 0%, 100%, 0.251);
+  --c-blue-light: hsl(216, 100%, 58%);
+  --c-blue-light-fade: hsl(216, 100%, 37%);
+  --c-blue-dark: hsl(216, 97%, 14%);
+
+  // text
+  --text-dark: var(--c-blue-dark);
+  --text-light: var(--c-blue-light);
+  --text-grey: var(--c-grey);
+  --text-white: var(--main-bg);
+  --text-bg: var(--main-bg);
+  --text-black: var(--c-black);
+
+  // main
+  --main-bg: var(--c-white);
+
+  // topnav
+  --topnav-bg: var(--c-grey-fade);
+  --topnav-link: var(--c-blue-dark);
+  --link-hover: var(--c-blue-light);
+  --social-fill: var(--topnav-link);
+  --social-hover: var(--link-hover);
+
+  //hero
+  --hero-gradient-lg: linear-gradient(
+    89deg,
+    #fff 30.62%,
+    rgba(255, 255, 255, 0.85) 41.31%,
+    rgba(255, 255, 255, 0.19) 58.65%,
+    rgba(255, 255, 255, 0) 72.78%
+  );
+  --hero-gradient-sm: linear-gradient(
+    57deg,
+    #fff 20.92%,
+    rgba(255, 255, 255, 0.78) 44.46%,
+    rgba(255, 255, 255, 0.2) 58.9%,
+    rgba(255, 255, 255, 0) 72.45%
+  );
+  --color-btn: var(--c-blue-light);
+
+  --overlay-bg: hsla(215, 97%, 15%, 0.4);
+
+  // Modal
+  --modal-bg: var(--c-blue-dark);
+
+  // Procedures
+  --procedures-card-gradient: linear-gradient(
+    180deg,
+    rgba(1, 28, 68, 0) 48.53%,
+    rgba(1, 28, 68, 0.73) 84.61%,
+    #011c44 101.39%
+  );
 }

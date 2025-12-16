@@ -1,0 +1,48 @@
+@use '../util' as u;
+
+.procedures {
+  &__slider-container {
+    display: flex;
+    gap: u.pxRem(32);
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__list {
+    padding-block-end: var(--clamp-16-32);
+  }
+
+  &__card {
+    position: relative;
+    display: grid;
+    align-items: end;
+    text-align: center;
+    grid-template: 1fr / 1fr;
+    overflow: hidden;
+    border-radius: 120px 4px;
+    // min-width: u.pxRem(320);
+    max-width: u.pxRem(344);
+    min-height: u.pxRem(416);
+    max-height: u.pxRem(456);
+
+    > * {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+    }
+  }
+  &__img {
+    // position: absolute;
+    object-fit: cover;
+  }
+  &__filter-gradient {
+    position: absolute;
+    inset: 0;
+    background: var(--procedures-card-gradient);
+  }
+  &__link {
+    padding-block-end: var(--clamp-24-32);
+    isolation: isolate;
+  }
+}

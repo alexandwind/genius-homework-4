@@ -1,0 +1,47 @@
+html {
+  // from 360px to 768px
+  --clamp-300-470-768: clamp(18.75rem, 9.853469rem + 40.6698565vw, 29.375rem);
+
+  // from 360px to 1200-1280px
+  --clamp-8-12: clamp(0.5rem, 0.402174rem + 0.4347826087vw, 0.75rem);
+  --clamp-8-16: clamp(0.5rem, 0.31183rem + 0.860215054vw, 1rem);
+  --clamp-12-18: clamp(0.75rem, 0.5956rem + 0.706vw, 1.125rem);
+  --clamp-14-16: clamp(0.875rem, 0.821429rem + 0.2381vw, 1rem);
+  --clamp-14-18: clamp(0.875rem, 0.7772rem + 0.4348vw, 1.125rem);
+  --clamp-16-18: clamp(1rem, 0.951087rem + 0.21739130435vw, 1.125rem);
+  --clamp-16-24: clamp(1rem, 0.80435rem + 0.8695652174vw, 1.5rem);
+  --clamp-16-32: clamp(1rem, 0.57143rem + 1.905vw, 2rem);
+  --clamp-16-40: clamp(1rem, 0.4130435rem + 2.6087vw, 2.5rem);
+  --clamp-16-56: clamp(1rem, -0.0714286rem + 4.761905vw, 3.5rem);
+  --clamp-18-22: clamp(1.125rem, 1.0221rem + 0.4706vw, 1.375rem);
+  --clamp-20-22: clamp(1.25rem, 1.19643rem + 0.2381vw, 1.375rem);
+  --clamp-20-24: clamp(1.25rem, 1.155914rem + 0.430107527vw, 1.5rem);
+  --clamp-20-32: clamp(1.25rem, 0.9677419355rem + 1.290322581vw, 2rem);
+  --clamp-20-71: clamp(1.25rem, 0.0027174rem + 5.54348vw, 4.4375rem);
+  --clamp-24-40: clamp(1.5rem, 1.1087rem + 1.739130435vw, 2.5rem);
+  --clamp-24-32: clamp(1.5rem, 1.304348rem + 0.8695652174vw, 2rem);
+  --clamp-24-48: clamp(1.5rem, 0.857143rem + 2.857143vw, 3rem);
+  --clamp-24-56: clamp(1.5rem, 0.71739130435rem + 3.47826087vw, 3.5rem);
+  --clamp-25-32: clamp(1.5625rem, 1.375rem + 0.8333vw, 2rem);
+  --clamp-28-42: clamp(1.75rem, 1.420698925rem + 1.5053763441vw, 2.625rem);
+  --clamp-32-40: clamp(2rem, 1.7857143rem + 0.952381vw, 2.5rem);
+  --clamp-32-64: clamp(2rem, 1.1765rem + 3.765vw, 4rem);
+  --clamp-40-64: clamp(2.5rem, 1.91304348rem + 2.608695652174vw, 4rem);
+  --clamp-40-96: clamp(2.5rem, 1.1304348rem + 6.08695652174vw, 6rem);
+  --clamp-42-22: clamp(1.375rem, 3.114130435rem + -2.1739130435vw, 2.625rem);
+  --clamp-42-48: clamp(2.625rem, 2.47826087rem + 0.6521739130435vw, 3rem);
+  --clamp-52-140: clamp(3.25rem, 0.8929rem + 10.4762vw, 8.75rem);
+  --clamp-54-140: clamp(3.375rem, 1.1618rem + 10.118vw, 8.75rem);
+  --clamp-57-74: clamp(3.5625rem, 3.107143rem + 2.02381vw, 4.625rem);
+  --clamp-60-180: clamp(3.75rem, 0.8152174rem + 13.04348vw, 11.25rem);
+  --clamp-60-220: clamp(3.75rem, -0.1630435rem + 17.39130435vw, 13.75rem);
+  --clamp-232-370: clamp(14.5rem, 10.94853rem + 16.23529412vw, 23.125rem);
+
+  // from 768px to 1280px
+  --clamp-768-32-64: clamp(2rem, 0.2353rem + 7.84314vw, 4rem);
+  --clamp-768-43-128: clamp(2.6875rem, -0.1927711rem + 12.8012vw, 8rem);
+  --clamp-768-76-240: clamp(4.75rem, -10.625rem + 32.03125vw, 15rem);
+  --clamp-768-76-280: clamp(4.75rem, -14.375rem + 39.84375vw, 17.5rem);
+  --clamp-768-470-720: clamp(29.375rem, 5.9375rem + 48.828125vw, 45rem);
+  --clamp-768-560-720: clamp(35rem, 20rem + 31.25vw, 45rem);
+}

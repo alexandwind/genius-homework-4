@@ -1,0 +1,63 @@
+@use '../util' as u;
+
+.contact {
+  @include u.bp-max(mob) {
+    padding-block-end: 0;
+  }
+  &__content {
+    @include u.bp(desk-lg) {
+      display: grid;
+      grid-template-columns: 60fr 42fr;
+      gap: 2rem;
+    }
+  }
+  &__form {
+    margin-inline: auto;
+    margin-block-end: 1.5rem;
+    padding-block-start: var(--clamp-42-48);
+    //   rework!
+    padding-block-end: var(--clamp-42-22);
+    padding-inline: var(--clamp-24-56);
+
+    @include u.bp(desk-lg) {
+      width: u.pxRem(420);
+      margin-inline-start: 0;
+      order: 2;
+    }
+  }
+
+  &__map-container {
+    margin-inline: -20px;
+    border-radius: 32px;
+    background: lightgray 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include u.bp(tab) {
+      margin-inline: auto;
+      width: max(73vw, u.pxRem(530));
+    }
+
+    @include u.bp(desk-lg) {
+      margin-inline: 0;
+      display: grid;
+      justify-self: end;
+      order: 1;
+      width: u.pxRem(600);
+      max-height: u.pxRem(470);
+    }
+  }
+
+  &__map {
+    border: none;
+    border-radius: 32px;
+
+    @include u.bp-max(desk) {
+      width: 100%;
+      max-height: var(--clamp-232-370);
+    }
+    @include u.bp(desk-lg) {
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use '../util' as u;
+
+.carousel-button {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--c-blue-dark);
+  fill: var(--c-blue-dark);
+  border-radius: 50%;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // rotate: 16deg;
+  transform: scaleY(-1);
+  transition: 200ms ease-in-out;
+  transition-property: fill, border;
+
+  &:hover {
+    cursor: pointer;
+    border-color: var(--c-blue-light);
+    fill: var(--c-blue-light);
+  }
+
+  &.next,
+  &.prev {
+    @include u.bp-max(mob) {
+      display: none;
+    }
+  }
+
+  &.next {
+    align-self: flex-start;
+  }
+
+  &.prev {
+    // transform: scaleY(-1);
+    // rotate: 164deg;
+    transform: scaleX(-1);
+    rotate: 360deg;
+    align-self: flex-end;
+  }
+
+  &__arrow {
+    width: 38px;
+    height: 47px;
+    margin-block-start: 10px;
+    margin-inline-start: 2px;
+  }
+}

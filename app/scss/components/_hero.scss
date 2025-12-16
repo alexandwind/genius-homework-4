@@ -1,0 +1,89 @@
+@use '../util' as u;
+
+.hero {
+  &__content {
+    display: grid;
+    justify-self: center;
+    padding-block-end: 56px;
+
+    @include u.bp(lap) {
+      justify-self: start;
+      padding-block-start: 20px;
+      padding-block-end: 127px;
+      padding-inline-start: 105px;
+    }
+  }
+  &__title {
+    margin-block-end: var(--clamp-32-40);
+  }
+  &__subtitle {
+    font-size: var(--clamp-12-18);
+    font-weight: 400;
+    font-family: u.$font-roboto;
+    display: block;
+    text-align: start;
+
+    @include u.bp-max(tab) {
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    @include u.bp(lap) {
+      margin-block-end: 16px;
+    }
+  }
+
+  &__modal-content {
+    display: grid;
+    gap: 8px;
+
+    @include u.bp(lap) {
+      gap: 14px;
+    }
+  }
+
+  &__overlay {
+    z-index: 10;
+    &:has(+ .hero__button[aria-expanded='true']) {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__button {
+    &[aria-expanded='true'] + .hero__modal {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__modal {
+    opacity: 0;
+  }
+
+  &__button,
+  &__button-description {
+    justify-self: center;
+
+    @include u.bp(lap) {
+      justify-self: start;
+    }
+  }
+
+  &__button-description {
+    color: var(--text-grey);
+    text-align: center;
+    max-width: u.pxRem(186);
+    font-family: u.$font-roboto;
+    font-size: u.pxRem(11);
+    font-weight: 400;
+    line-height: 1.64;
+    text-align: center;
+
+    @include u.bp(lap) {
+      text-align: start;
+      font-size: u.pxRem(12);
+      line-height: 1.5;
+    }
+  }
+}

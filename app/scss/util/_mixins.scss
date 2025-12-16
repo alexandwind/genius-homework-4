@@ -1,6 +1,6 @@
-@use './breakpoints' as b;
+@use './brakepoints' as b;
 
-@mixin bp-min($size) {
+@mixin bp($size) {
   @media (min-width: map-get(b.$breakpoints-min, $size)) {
     @content;
   }

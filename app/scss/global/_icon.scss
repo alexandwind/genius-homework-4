@@ -1,0 +1,13 @@
+.svg {
+  fill: var(--c-blue-light);
+}
+
+.social,
+.open-close {
+  transition: fill 300ms ease-in-out;
+
+  &:hover {
+    fill: var(--social-hover);
+    cursor: pointer;
+  }
+}

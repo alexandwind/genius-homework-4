@@ -1,0 +1,142 @@
+@keyframes glow {
+  5%,
+  55%,
+  95% {
+    stroke: var(--c-blue-light-fade);
+    filter: drop-shadow(0 0 2px var(--c-blue-light-fade));
+  }
+  30%,
+  80% {
+    stroke: var(--c-blue-light);
+    filter: drop-shadow(0 0 8px var(--c-blue-light-fade));
+  }
+}
+
+@keyframes glow1 {
+  5%,
+  20%,
+  25%,
+  30%,
+  50%,
+  75%,
+  95% {
+    width: 50px;
+    height: 50px;
+  }
+  0% {
+    inset: auto auto 257px 40px;
+  }
+  20% {
+    inset: 40% 75%;
+  }
+
+  25% {
+    stroke: var(--c-blue-light-fade);
+    filter: drop-shadow(0 0 2px var(--c-blue-light-fade));
+  }
+  30% {
+    stroke: var(--c-blue-light);
+    filter: drop-shadow(0 0 8px var(--c-blue-light-fade));
+    transform-origin: -40px center;
+    rotate: 2turn;
+  }
+
+  50% {
+    stroke: var(--c-blue-light);
+    filter: drop-shadow(0 0 8px var(--c-blue-light-fade));
+  }
+
+  75% {
+    inset: 40% 75%;
+  }
+
+  95% {
+    inset: auto auto 257px 40px;
+  }
+}
+
+@keyframes glow2 {
+  5%,
+  20%,
+  25%,
+  30%,
+  50%,
+  75%,
+  95% {
+    width: 50px;
+    height: 50px;
+  }
+  0% {
+    inset: 87px 31px auto auto;
+  }
+  20% {
+    inset: 30% 7% auto auto;
+  }
+
+  25% {
+    stroke: var(--c-blue-light-fade);
+    filter: drop-shadow(0 0 2px var(--c-blue-light-fade));
+  }
+  30% {
+    stroke: var(--c-blue-light);
+    filter: drop-shadow(0 0 8px var(--c-blue-light-fade));
+    transform-origin: -40px center;
+    rotate: 2turn;
+  }
+
+  50% {
+    stroke: var(--c-blue-light);
+    filter: drop-shadow(0 0 8px var(--c-blue-light-fade));
+  }
+
+  75% {
+    inset: 30% 7% auto auto;
+  }
+
+  95% {
+    inset: 87px 31px auto auto;
+  }
+}
+
+@keyframes glow3 {
+  5%,
+  20%,
+  25%,
+  30%,
+  50%,
+  75%,
+  95% {
+    width: 50px;
+    height: 50px;
+  }
+  0% {
+    inset: 325px 64px auto auto;
+  }
+  20% {
+    inset: 40% 0 auto auto;
+  }
+
+  25% {
+    stroke: var(--c-blue-light-fade);
+    filter: drop-shadow(0 0 2px var(--c-blue-light-fade));
+  }
+  30% {
+    stroke: var(--c-blue-light);
+    filter: drop-shadow(0 0 8px var(--c-blue-light-fade));
+    transform-origin: -40px center;
+    rotate: 2turn;
+  }
+
+  50% {
+    stroke: var(--c-blue-light);
+    filter: drop-shadow(0 0 8px var(--c-blue-light-fade));
+  }
+
+  75% {
+    inset: 40% 0 auto auto;
+  }
+
+  95% {
+    inset: 325px 64px auto auto;
+  }
+}

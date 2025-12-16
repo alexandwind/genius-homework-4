@@ -1,50 +1,42 @@
-$font-play: 'Play', sans-serif;
 $font-roboto: 'Roboto', sans-serif;
+$font-play: 'Play', sans-serif;
 
-@font-face {
-  font-display: swap;
-  font-family: 'Play';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/play-v20-latin-regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Play';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/play-v20-latin-700.woff2') format('woff2');
-}
-
+/* roboto-regular*/
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/roboto-v48-latin-regular.woff2') format('woff2');
+  src: url('../../../assets/fonts/roboto-v49-latin-regular.woff2')
+    format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/roboto-v48-latin-500.woff2') format('woff2');
+  src: url('../../../assets/fonts/roboto-v49-latin-500.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/roboto-v48-latin-600.woff2') format('woff2');
+  src: url('../../../assets/fonts/roboto-v49-latin-600.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/roboto-v48-latin-700.woff2') format('woff2');
+  src: url('../../../assets/fonts/roboto-v49-latin-700.woff2') format('woff2');
+}
+
+/* play */
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../../assets/fonts/play-v21-latin-700.woff2') format('woff2');
 }

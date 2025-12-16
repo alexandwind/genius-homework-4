@@ -1,0 +1,18 @@
+@use '../util' as u;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--clamp-16-24);
+
+  &__bullet,
+  &__bullet-active {
+    width: var(--clamp-8-12);
+    height: var(--clamp-8-12);
+    border-radius: 50%;
+    background-color: var(--c-grey);
+  }
+  &__bullet-active {
+    background-color: var(--c-blue-light);
+  }
+}

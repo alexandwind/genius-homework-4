@@ -1,0 +1,44 @@
+@use '../util' as u;
+
+.modal {
+  padding-block: var(--clamp-24-40);
+  background-color: var(--modal-bg);
+  border-radius: 3rem;
+  width: var(--clamp-300-470-768);
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity ease-in-out;
+
+  @include u.bp(lap) {
+    width: var(--clamp-768-470-720);
+  }
+
+  &__close {
+    position: absolute;
+    background: none;
+    border: 0;
+    width: var(--clamp-20-32);
+    height: var(--clamp-20-32);
+    right: var(--clamp-28-42);
+  }
+  &__icon {
+    fill: var(--main-bg);
+  }
+  &__content {
+    padding-inline: var(--clamp-40-64);
+    display: grid;
+    justify-items: center;
+    gap: var(--clamp-24-40);
+  }
+  &__form {
+    width: 100%;
+  }
+  &__title {
+    color: var(--c-white);
+  }
+}

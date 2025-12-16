@@ -1,0 +1,16 @@
+@use '../util' as u;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--overlay-bg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity ease-in-out;
+
+  &.mobile {
+    background-color: var(--main-bg);
+  }
+}

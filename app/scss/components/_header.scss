@@ -1,0 +1,13 @@
+@use '../util' as u;
+
+.header {
+  background-color: var(--topnav-bg);
+  background-image: var(--hero-gradient-sm), var(--shared-bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  @include u.bp(tab) {
+    background-image: var(--hero-gradient-lg), var(--shared-bg);
+  }
+}
