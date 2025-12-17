@@ -33,9 +33,9 @@
     background-repeat: no-repeat;
 
     @include u.bp(tab) {
+      border-radius: 32px;
       margin-inline: auto;
       width: max(73vw, u.pxRem(530));
-      border-radius: 32px;
     }
 
     @include u.bp(desk-lg) {
