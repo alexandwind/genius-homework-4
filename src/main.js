@@ -61,6 +61,7 @@ const openMobMenu = () => {
 
 const openModal = () => {
   btnOpenModal.setAttribute('aria-expanded', true);
+  modalForm.setAttribute('aria-hidden', false);
   modalForm.inert = false;
   main.inert = true;
   footer.inert = true;
@@ -86,6 +87,7 @@ const closeMobMenu = () => {
 
 const closeModal = () => {
   btnOpenModal.setAttribute('aria-expanded', false);
+  modalForm.setAttribute('aria-hidden', true);
   modalForm.inert = true;
   main.inert = false;
   footer.inert = false;
